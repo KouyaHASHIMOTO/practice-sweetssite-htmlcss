@@ -41,9 +41,10 @@
     </header>
 
     <div class="fv">
-      <div class="fv-img">
+      <picture class="fv-picture">
+        <source media="(min-width:768px)" srcset="./img/fv.png" />
         <img src="./img/sp/fv.png" alt="" />
-      </div>
+      </picture>
     </div>
 
     <section id="about" class="about">
@@ -52,16 +53,18 @@
           <span class="section-heading-main">About</span>
           <span class="section-heading-sub">ー 当店について ー</span>
         </h2>
-        <div class="about-img">
-          <img src="./img/about.png" alt="" />
-        </div>
-        <div class="about-text-contents">
-          <p class="about-text">
-            当店では、素材の持つ美味しさや風味を最大限に生かし、シンプルでありながらも、素材の良さを引き出すこだわりのスイーツを提供しています。
-          </p>
-          <p class="about-text">
-            自然な味わいを大切にし、素材を感じさせるスイーツで、心に残るひとときをお過ごしください。
-          </p>
+        <div class="about-contents">
+          <div class="about-img">
+            <img src="./img/about.png" alt="" />
+          </div>
+          <div class="about-text-contents">
+            <p class="about-text">
+              当店では、素材の持つ美味しさや風味を最大限に生かし、シンプルでありながらも、素材の良さを引き出すこだわりのスイーツを提供しています。
+            </p>
+            <p class="about-text">
+              自然な味わいを大切にし、素材を感じさせるスイーツで、心に残るひとときをお過ごしください。
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -136,7 +139,7 @@
       <div class="logo-img">
         <img src="./img/logo.svg" alt="" />
       </div>
-      <span class="footer-text"> ー 各SNS更新中 ー</span>
+      <p class="footer-text">ー 各SNS更新中 ー</p>
       <ul class="footer-nav-list">
         <li class="footer-nav-item">
           <a href="#" class="footer-nav-link">

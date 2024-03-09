@@ -22,9 +22,7 @@ header {
 }
 
 .header-inner {
-  max-width: 1080px;
   margin: 0 auto;
-  width: 200px;
 }
 
 .header-nav-list {
@@ -43,8 +41,6 @@ header {
 .about-text {
   font-size: 14px;
   line-height: 1.8;
-}
-.about-img {
 }
 
 .about-text-contents {
@@ -176,6 +172,7 @@ header {
 
 /* 共通クラス */
 .logo-img {
+  min-width: 200px;
   width: 200px;
   margin: 0 auto;
 }
@@ -194,4 +191,130 @@ header {
 
 .section-heading-sub {
   font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  /* headerクラス */
+  .header {
+    padding-bottom: 10px;
+  }
+
+  .header-inner {
+    max-width: 1080px;
+    padding: 0 30px 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-nav-list {
+    gap: 40px;
+  }
+
+  .header-logo {
+    width: 200px;
+  }
+
+  .header-inner > .logo-img {
+    margin: 0;
+  }
+
+  /* aboutクラス */
+  .about {
+    padding: 100px 0;
+  }
+
+  .about-img {
+    width: 300px; /* 希望する幅に設定 */
+    min-width: 300px;
+  }
+
+  .about-contents {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about-text-contents {
+    margin-top: 0;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+
+  /* menuクラス */
+  .menu {
+    padding: 0 0 100px 0;
+  }
+
+  .menu-list {
+    display: flex;
+
+    gap: 40px;
+  }
+
+  .menu-text {
+    margin-top: 12px;
+  }
+
+  .menu-item + .menu-item {
+    margin: 0;
+  }
+
+  /* shopクラス */
+  .shop {
+    padding: 70px 0;
+    background-image: url(../img/bg-shop.png);
+  }
+
+  .shop-inner {
+    max-width: 600px;
+  }
+
+  .form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .form-send {
+    padding: 15px 30px;
+    margin: 0;
+  }
+
+  /* footerクラス */
+
+  .footer > .logo-img {
+    margin: 0 auto;
+  }
+
+  .footer-text {
+    margin-top: 10px;
+  }
+
+  .footer-nav-list {
+    gap: 40px;
+  }
+
+  .footer-copylight {
+    font-size: 13px;
+  }
+
+  .footer-copy-wrapper {
+    padding: 15px 0;
+  }
+
+  /*共通クラス */
+  .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .logo-img {
+  }
+
+  .section-heading-main {
+    font-size: 64px;
+  }
 }

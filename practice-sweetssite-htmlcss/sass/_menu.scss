@@ -1,0 +1,30 @@
+@use "variables";
+
+.menu {
+    background-color: variables.$common-background-color;
+    text-align: center;
+
+    padding: 50px 0;
+
+    .menu-item + .menu-item {
+        margin-top: 70px;
+    }
+
+    .menu-name-main {
+        font-size: 18px;
+        display: block;
+        margin-top: 15px;
+    }
+
+    .menu-name-sub {
+        font-size: 12px;
+        display: block;
+        color: variables.$menu-text-color;
+        margin: 10px 0;
+    }
+
+    .menu-text {
+        font-size: 14px;
+        color: variables.$menu-text-color;
+    }
+}

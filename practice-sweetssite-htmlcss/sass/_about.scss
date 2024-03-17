@@ -1,0 +1,18 @@
+@use "variables";
+
+.about {
+    background-color: variables.$common-background-color;
+
+    .about-text {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .about-text-contents {
+        margin-top: 20px;
+    }
+
+    .about-text + .about-text {
+        margin-top: 20px;
+    }
+}

@@ -1,3 +1,5 @@
+@use "mixin";
+
 .footer {
     background-color: #3c301e;
     padding-top: 50px;
@@ -34,5 +36,25 @@
 
     .footer-copylight {
         color: #fff;
+    }
+}
+
+@include mixin.mq("pc") {
+    .footer {
+        .footer-text {
+            margin-top: 10px;
+        }
+
+        .footer-nav-list {
+            gap: 40px;
+        }
+
+        .footer-copylight {
+            font-size: 13px;
+        }
+
+        .footer-copy-wrapper {
+            padding: 15px 0;
+        }
     }
 }

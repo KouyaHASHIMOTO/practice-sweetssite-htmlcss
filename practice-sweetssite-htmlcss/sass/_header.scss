@@ -1,3 +1,5 @@
+@use "mixin";
+
 header {
     padding-top: 15px;
     width: 100%;
@@ -36,5 +38,36 @@ header {
 
     .drawer-text + .drawer-text {
         margin-top: 8px;
+    }
+}
+
+@include mixin.mq(pc) {
+    .header {
+        padding-bottom: 10px;
+
+        .header-inner {
+            max-width: 1080px;
+            padding: 0 30px 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-nav-list {
+            gap: 40px;
+        }
+
+        .header-logo {
+            width: 200px;
+        }
+
+        .header-inner > .logo-img {
+            margin: 0;
+        }
+
+        .drawer-list {
+            font-size: 15px;
+            top: 230%;
+        }
     }
 }

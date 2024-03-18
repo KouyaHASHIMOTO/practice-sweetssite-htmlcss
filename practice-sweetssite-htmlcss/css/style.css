@@ -13,16 +13,46 @@
   text-align: center;
   margin-bottom: 40px;
 }
-
-.section-heading-main {
+.section-heading .section-heading-main {
   font-size: 40px;
   display: block;
 }
-
-.section-heading-sub {
+.section-heading .section-heading-sub {
   font-size: 12px;
 }
 
+#page-top {
+  width: 60px;
+  height: 60px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* 垂直方向の中央寄せ */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* 水平方向の中央寄せ */
+  border-radius: 90px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .section-heading-main {
+    font-size: 64px;
+  }
+}
 header {
   padding-top: 15px;
   width: 100%;
@@ -63,6 +93,37 @@ header .drawer-text + .drawer-text {
   margin-top: 8px;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    padding-bottom: 10px;
+  }
+  .header .header-inner {
+    max-width: 1080px;
+    padding: 0 30px 0 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .header-nav-list {
+    gap: 40px;
+  }
+  .header .header-logo {
+    width: 200px;
+  }
+  .header .header-inner > .logo-img {
+    margin: 0;
+  }
+  .header .drawer-list {
+    font-size: 15px;
+    top: 230%;
+  }
+}
 .about {
   background-color: #f1eee4;
 }
@@ -77,6 +138,30 @@ header .drawer-text + .drawer-text {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .about {
+    padding: 100px 0;
+  }
+  .about .about-img {
+    width: 300px; /* 希望する幅に設定 */
+    min-width: 300px;
+  }
+  .about .about-contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
+  .about .about-text-contents {
+    margin-top: 0;
+  }
+  .about .about-text {
+    font-size: 15px;
+  }
+}
 .menu {
   background-color: #f1eee4;
   text-align: center;
@@ -101,6 +186,48 @@ header .drawer-text + .drawer-text {
   color: #a98c5f;
 }
 
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 0 0 100px 0;
+  }
+  .menu .menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+  }
+  .menu .menu-text {
+    margin-top: 12px;
+  }
+  .menu .menu-item + .menu-item {
+    margin: 0;
+  }
+  .menu .gallery-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(32, 32, 32, 0.8);
+    z-index: 1;
+  }
+  .menu .gallery-modal img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin: auto;
+    max-width: 800px;
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    z-index: 1;
+  }
+}
 .shop {
   background-image: url(../img/sp/bg-shop.png);
   background-position: center center;
@@ -143,6 +270,28 @@ header .drawer-text + .drawer-text {
   font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
 }
 
+@media screen and (min-width: 768px) {
+  .shop {
+    padding: 70px 0;
+    background-image: url(../img/bg-shop.png);
+  }
+  .shop .shop-inner {
+    max-width: 600px;
+  }
+  .shop .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .shop .form-send {
+    padding: 15px 30px;
+    margin: 0;
+  }
+}
 .footer {
   background-color: #3c301e;
   padding-top: 50px;
@@ -180,6 +329,20 @@ header .drawer-text + .drawer-text {
   color: #fff;
 }
 
+@media screen and (min-width: 768px) {
+  .footer .footer-text {
+    margin-top: 10px;
+  }
+  .footer .footer-nav-list {
+    gap: 40px;
+  }
+  .footer .footer-copylight {
+    font-size: 13px;
+  }
+  .footer .footer-copy-wrapper {
+    padding: 15px 0;
+  }
+}
 body {
   color: #3c301e;
   font-family: "Josefin Sans", "Noto Sans JP", sans-serif;

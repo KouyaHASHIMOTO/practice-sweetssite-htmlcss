@@ -1,4 +1,6 @@
 @use "variables";
+@use "mixin";
+
 .shop {
     background-image: url(../img/sp/bg-shop.png);
     background-position: center center;
@@ -45,5 +47,27 @@
         border: none;
         border-radius: 5px;
         font-family: variables.$common-font-family;
+    }
+}
+
+@include mixin.mq("pc") {
+    .shop {
+        padding: 70px 0;
+        background-image: url(../img/bg-shop.png);
+
+        .shop-inner {
+            max-width: 600px;
+        }
+
+        .form {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .form-send {
+            padding: 15px 30px;
+            margin: 0;
+        }
     }
 }

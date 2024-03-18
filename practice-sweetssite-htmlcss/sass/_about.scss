@@ -1,4 +1,5 @@
 @use "variables";
+@use "mixin";
 
 .about {
     background-color: variables.$common-background-color;
@@ -14,5 +15,30 @@
 
     .about-text + .about-text {
         margin-top: 20px;
+    }
+}
+
+@include mixin.mq("pc") {
+    .about {
+        padding: 100px 0;
+
+        .about-img {
+            width: 300px; /* 希望する幅に設定 */
+            min-width: 300px;
+        }
+
+        .about-contents {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text-contents {
+            margin-top: 0;
+        }
+
+        .about-text {
+            font-size: 15px;
+        }
     }
 }
